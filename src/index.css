@@ -3,13 +3,19 @@
 @tailwind utilities;
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-  
   body {
-    @apply bg-gray-900 text-white antialiased;
+    @apply antialiased;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Dark mode (default) */
+  body {
+    @apply bg-gray-900 text-white;
+  }
+
+  /* Light mode */
+  body:not(.dark) {
+    @apply bg-gray-50 text-gray-900;
   }
 
   html {
@@ -19,7 +25,7 @@
 
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-all duration-300 font-medium;
+    @apply px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-all duration-300 font-medium shadow-lg hover:shadow-xl;
   }
 
   .btn-secondary {
@@ -30,12 +36,25 @@
     @apply bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 transition-all duration-300;
   }
 
+  /* Light mode card */
+  body:not(.dark) .card {
+    @apply bg-white bg-opacity-90 shadow-lg;
+  }
+
   .card-hover {
     @apply hover:bg-gray-700 hover:scale-105 hover:shadow-2xl cursor-pointer;
   }
 
+  body:not(.dark) .card-hover {
+    @apply hover:bg-gray-50;
+  }
+
   .section-title {
     @apply text-3xl md:text-4xl lg:text-5xl font-bold text-cyan-400 mb-8;
+  }
+
+  body:not(.dark) .section-title {
+    @apply text-cyan-600;
   }
 
   .text-gradient {
@@ -50,5 +69,18 @@
   
   .animation-delay-400 {
     animation-delay: 400ms;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: .5;
+    }
+  }
+
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 }
