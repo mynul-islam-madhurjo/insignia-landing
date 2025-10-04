@@ -9,12 +9,12 @@
   }
 
   /* Dark mode (default) */
-  body {
+  html.dark body {
     @apply bg-gray-900 text-white;
   }
 
   /* Light mode */
-  body:not(.dark) {
+  html:not(.dark) body {
     @apply bg-gray-50 text-gray-900;
   }
 
@@ -29,31 +29,52 @@
   }
 
   .btn-secondary {
-    @apply px-6 py-3 bg-transparent border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 rounded-lg transition-all duration-300 font-medium;
+    @apply px-6 py-3 bg-transparent border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 rounded-lg transition-all duration-300 font-medium;
+  }
+
+  html.dark .btn-secondary {
+    @apply hover:text-gray-900;
+  }
+
+  html:not(.dark) .btn-secondary {
+    @apply hover:text-white;
   }
 
   .card {
-    @apply bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 transition-all duration-300;
+    @apply rounded-2xl p-8 transition-all duration-300;
+  }
+
+  /* Dark mode card */
+  html.dark .card {
+    @apply bg-gray-800 bg-opacity-50 backdrop-blur-sm text-white;
   }
 
   /* Light mode card */
-  body:not(.dark) .card {
-    @apply bg-white bg-opacity-90 shadow-lg;
+  html:not(.dark) .card {
+    @apply bg-white shadow-lg text-gray-900;
   }
 
   .card-hover {
-    @apply hover:bg-gray-700 hover:scale-105 hover:shadow-2xl cursor-pointer;
+    @apply hover:scale-105 hover:shadow-2xl cursor-pointer;
   }
 
-  body:not(.dark) .card-hover {
+  html.dark .card-hover {
+    @apply hover:bg-gray-700;
+  }
+
+  html:not(.dark) .card-hover {
     @apply hover:bg-gray-50;
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-cyan-400 mb-8;
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-8;
   }
 
-  body:not(.dark) .section-title {
+  html.dark .section-title {
+    @apply text-cyan-400;
+  }
+
+  html:not(.dark) .section-title {
     @apply text-cyan-600;
   }
 

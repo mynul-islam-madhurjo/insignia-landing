@@ -49,8 +49,8 @@ const Header = () => {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-gray-900 bg-opacity-95 backdrop-blur-md shadow-lg' 
+        isScrolled || mobileMenuOpen
+          ? 'bg-gray-900 bg-opacity-95 backdrop-blur-md shadow-lg dark:bg-gray-900 dark:bg-opacity-95' 
           : 'bg-transparent'
       }`}
     >
@@ -79,6 +79,20 @@ const Header = () => {
                 {link.name}
               </a>
             ))}
+            
+            {/* Dark Mode Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg hover:bg-gray-800 transition-colors"
+              aria-label="Toggle theme"
+            >
+              {isDarkMode ? (
+                <Sun size={20} className="text-yellow-400" />
+              ) : (
+                <Moon size={20} className="text-cyan-400" />
+              )}
+            </button>
+            
             <button className="btn-secondary flex items-center gap-2 text-sm lg:text-base">
               Request Demo 
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -86,13 +100,28 @@ const Header = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden text-white p-2 hover:bg-gray-800 rounded-lg transition-colors"
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="md:hidden flex items-center gap-3">
+            {/* Dark Mode Toggle - Mobile */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg hover:bg-gray-800 transition-colors"
+              aria-label="Toggle theme"
+            >
+              {isDarkMode ? (
+                <Sun size={20} className="text-yellow-400" />
+              ) : (
+                <Moon size={20} className="text-cyan-400" />
+              )}
+            </button>
+            
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="text-white p-2 hover:bg-gray-800 rounded-lg transition-colors"
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}

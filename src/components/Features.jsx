@@ -70,11 +70,11 @@ const Features = () => {
                 {feature.icon}
               </div>
               
-              <h3 className="text-xl md:text-2xl font-bold text-cyan-400 mb-4">
+              <h3 className="text-xl md:text-2xl font-bold text-cyan-400 dark:text-cyan-400 mb-4">
                 {feature.title}
               </h3>
               
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-gray-300 dark:text-gray-300 mb-6 leading-relaxed">
                 {feature.description}
               </p>
               
