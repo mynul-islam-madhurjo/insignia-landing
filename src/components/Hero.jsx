@@ -2,11 +2,11 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <section className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden">
+    <section className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden bg-transparent">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse animation-delay-400"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse dark:opacity-10"></div>
+        <div className="absolute bottom-20 right-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse animation-delay-400 dark:opacity-10"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,19 +15,19 @@ const Hero = () => {
           {/* Left Column - Text Content */}
           <div className="space-y-6 md:space-y-8 z-10">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              <span className="text-cyan-400">Save your data</span>
+              <span className="text-cyan-600 dark:text-cyan-400">Save your data</span>
               <br />
-              <span className="text-cyan-400">storage here.</span>
+              <span className="text-cyan-600 dark:text-cyan-400">storage here.</span>
             </h1>
             
-            <p className="text-gray-300 text-base sm:text-lg md:text-xl max-w-xl leading-relaxed">
+            <p className="text-gray-600 dark:text-gray-300 text-base sm:text-lg md:text-xl max-w-xl leading-relaxed">
               Insignia is a data storage area that has been tested for security, 
               so you can store your data here safely but not be afraid of being 
               stolen by others.
             </p>
 
             <div className="pt-4">
-              <button className="bg-gray-800 hover:bg-gray-700 px-8 py-3 rounded-lg transition-all duration-300 font-medium text-white shadow-lg hover:shadow-xl">
+              <button className="bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 px-8 py-3 rounded-lg transition-all duration-300 font-medium text-gray-800 dark:text-white shadow-lg hover:shadow-xl">
                 Learn more
               </button>
             </div>

@@ -52,7 +52,7 @@ const Testimonials = () => {
   }
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-gray-800 to-gray-900">
+    <section className="py-16 md:py-24 bg-gray-50 dark:bg-gradient-to-b dark:from-gray-800 dark:to-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="section-title">Testimonials</h2>
 

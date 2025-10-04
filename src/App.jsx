@@ -12,7 +12,7 @@ import Footer from './components/Footer'
 function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
+      <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
         <Header />
         <main>
           <Hero />

@@ -2,7 +2,7 @@ import React from 'react'
 
 const DataStorageBank = () => {
   return (
-    <section id="about" className="py-16 md:py-24">
+    <section id="about" className="py-16 md:py-24 bg-transparent">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           

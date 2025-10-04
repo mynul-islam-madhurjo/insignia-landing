@@ -40,16 +40,16 @@ const Subscribe = () => {
   }
 
   return (
-    <section id="signup" className="py-16 md:py-24">
+    <section id="signup" className="py-16 md:py-24 bg-transparent">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Subscribe Section */}
-        <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 md:p-12 lg:p-16 shadow-2xl mb-16">
+        <div className="bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 md:p-12 lg:p-16 shadow-2xl mb-16">
           <div className="max-w-3xl">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-cyan-400 mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-cyan-600 dark:text-cyan-400 mb-4">
               Subscribe !
             </h2>
-            <p className="text-gray-300 text-base md:text-lg mb-8">
+            <p className="text-gray-600 dark:text-gray-300 text-base md:text-lg mb-8">
               Join our newsletter to never miss any latest news.
             </p>
 

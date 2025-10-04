@@ -50,7 +50,7 @@ const Header = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled || mobileMenuOpen
-          ? 'bg-gray-900 bg-opacity-95 backdrop-blur-md shadow-lg dark:bg-gray-900 dark:bg-opacity-95' 
+          ? 'bg-white dark:bg-gray-900 bg-opacity-95 dark:bg-opacity-95 backdrop-blur-md shadow-lg' 
           : 'bg-transparent'
       }`}
     >
@@ -74,7 +74,7 @@ const Header = () => {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
+                className="text-gray-700 dark:text-gray-300 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors duration-200 font-medium"
               >
                 {link.name}
               </a>

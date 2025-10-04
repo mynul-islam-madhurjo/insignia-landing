@@ -55,7 +55,7 @@ const Features = () => {
   }
 
   return (
-    <section id="features" className="py-16 md:py-24 bg-gradient-to-b from-gray-900 to-gray-800">
+    <section id="features" className="py-16 md:py-24 bg-gray-50 dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="section-title">Features</h2>
 
@@ -99,11 +99,11 @@ const Features = () => {
               {features[currentSlide].icon}
             </div>
             
-            <h3 className="text-xl font-bold text-cyan-400 mb-4">
+            <h3 className="text-xl font-bold text-cyan-400 dark:text-cyan-400 mb-4">
               {features[currentSlide].title}
             </h3>
             
-            <p className="text-gray-300 mb-6 leading-relaxed flex-grow">
+            <p className="text-gray-300 dark:text-gray-300 mb-6 leading-relaxed flex-grow">
               {features[currentSlide].description}
             </p>
             

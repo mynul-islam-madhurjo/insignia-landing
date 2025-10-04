@@ -13,7 +13,7 @@ const DownloadApp = () => {
   ]
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-24 bg-transparent">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           
@@ -23,7 +23,7 @@ const DownloadApp = () => {
               Download Our App
             </h2>
             
-            <div className="space-y-4 text-gray-300 text-base md:text-lg leading-relaxed">
+            <div className="space-y-4 text-gray-600 dark:text-gray-300 text-base md:text-lg leading-relaxed">
               <p>
                 The place to store various data that you can access at any time 
                 through the internet and where you can carry it.
@@ -36,7 +36,7 @@ const DownloadApp = () => {
             </div>
 
             <div className="pt-4">
-              <button className="bg-gray-800 hover:bg-gray-700 px-8 py-3 rounded-lg transition-all duration-300 font-medium text-white shadow-lg hover:shadow-xl hover:scale-105">
+              <button className="bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 px-8 py-3 rounded-lg transition-all duration-300 font-medium text-gray-800 dark:text-white shadow-lg hover:shadow-xl hover:scale-105">
                 Download
               </button>
             </div>

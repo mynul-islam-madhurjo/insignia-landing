@@ -27,13 +27,17 @@ export const ThemeProvider = ({ children }) => {
 
   // Update localStorage and document class when theme changes
   useEffect(() => {
+    const root = document.documentElement
     const theme = isDarkMode ? 'dark' : 'light'
+    
     localStorage.setItem('theme', theme)
     
     if (isDarkMode) {
-      document.documentElement.classList.add('dark')
+      root.classList.add('dark')
+      root.classList.remove('light')
     } else {
-      document.documentElement.classList.remove('dark')
+      root.classList.remove('dark')
+      root.classList.add('light')
     }
   }, [isDarkMode])
 
